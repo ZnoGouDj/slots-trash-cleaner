@@ -12,7 +12,7 @@ function cleaner() {
             return str.toUpperCase();
         })
 
-    x.value = clean;
+    x.value = 'You can play these slots:' + clean + '. Good luck!';
 }
 
 // softswiss:"SlotName", softswiss:"SlotName"

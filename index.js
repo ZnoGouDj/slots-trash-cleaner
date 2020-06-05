@@ -7,6 +7,7 @@ function cleaner() {
     let clean = x.value
         .replace(/([A-Z])/g, ' $1')
         .replace(/softswiss/g, '')
+        .replace(/mrslotty/g, '')
         .replace(/[\[\]'":]+/g, '')
         .replace(/^./, function (str) {
             return str.toUpperCase();
@@ -16,3 +17,5 @@ function cleaner() {
 }
 
 // [softswiss:"SlotName", softswiss:"SlotName"]
+// [mrslotty:"SlotName", mrslotty:"SlotName"]
+// [mrslotty:"SlotName", softswiss:"SlotName"]

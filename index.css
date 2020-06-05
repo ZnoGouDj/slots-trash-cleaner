@@ -4,6 +4,8 @@ body {
 
 h1 {
     color:  #FCF6F5FF;
+    font-family: "Allerta Stencil", Sans-serif;
+    font-size: 1.5em;
     text-align: center;
     margin-top: 250px;
 }

@@ -8,8 +8,7 @@ function cleaner() {
 
     if (!x.value) { alert('Please, paste any shitty game here'); return; }
     if (x.value.slice(0, 25) === 'You can play these slots:') { return; }
-    if (x.value.search('softswiss') < 0) { alert("For 'softswiss' and 'mrslotty' only"); return; }
-    if (x.value.search('mrslotty') < 0) { alert("For 'softswiss' and 'mrslotty' only"); return; }
+    if (x.value.search('softswiss') < 0 && x.value.search('mrslotty') < 0) { alert("For 'softswiss' and 'mrslotty' only"); return; }
     
 
     let clean = x.value

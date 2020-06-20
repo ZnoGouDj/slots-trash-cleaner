@@ -14,18 +14,17 @@ h1 {
     margin-top: 250px;
 }
 
-#button {
+#buttonRu, #buttonEn {
     background-color: #2DA8D8FF; 
     color: #FCF6F5FF;
-    padding: 15px 32px;
+    padding: 15px 50px;
     text-decoration: none;
     font-weight: bold;
-    display: block;
     font-size: 16px;
     margin: 0 auto;
   }
 
-#button:hover {
+#buttonRu:hover, #buttonEn:hover {
     background-color: #D9514EFF;
 }
 

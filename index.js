@@ -1,13 +1,23 @@
-let btn = document.getElementById('buttonEn');
+let btn = document.getElementById('button');
 btn.addEventListener('click', cleaner, false);
 
 let language = 'en';
 
+function languageChanger() {
+    let lng = document.getElementById('myCheck');
+    if (lng.checked == true) {
+        language = 'ru';
+    } else {
+        language = 'en';
+    }
+}
+
 function cleaner() {
     let x = document.getElementById('thetext');
 
-    if (!x.value) { alert('Please, paste any shitty game here'); return; }
+    if (!x.value) { alert('Please, paste any shitty game in the text area'); return; }
     if (x.value.slice(0, 25) === 'You can play these slots:') { return; }
+    if (x.value.slice(0, 35) === 'Вы можете играть в следующие слоты:') { return; }
     if (x.value.search('softswiss') < 0 && x.value.search('mrslotty') < 0) { alert("For 'softswiss' and 'mrslotty' only"); return; }
     
 
@@ -19,8 +29,12 @@ function cleaner() {
         .replace(/^./, function (str) {
             return str.toUpperCase();
         })
-
-    x.value = 'You can play these slots:' + clean + '. Good luck!';
+    
+    if (language === 'en') {
+        x.value = 'You can play these slots:' + clean + '. Good luck!';
+    } else {
+        x.value = 'Вы можете играть в следующие слоты:' + clean + '. Удачи!'
+    }
 }
 
 // ["softswiss:SlotName", "softswiss:SlotName"]

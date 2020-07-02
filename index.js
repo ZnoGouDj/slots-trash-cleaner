@@ -29,6 +29,8 @@ function cleaner() {
         .replace(/netent/g, '')
         .replace(/_not_mobile_html_sw/g, '')
         .replace(/_mobile_html_sw/g, '')
+        .replace(/_not_mobile_sw/g, '')
+        .replace(/_mobile_sw/g, '')
         .replace(/[\[\]'":]+/g, '')
         .replace(/^./, function (str) {
             return str.toUpperCase();

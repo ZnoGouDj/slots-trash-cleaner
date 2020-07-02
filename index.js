@@ -26,6 +26,7 @@ function cleaner() {
         .replace(/softswiss/g, '')
         .replace(/mrslotty/g, '')
         .replace(/pragmatic/g, '')
+        .replace(/playngo/g, '')
         .replace(/netent/g, '')
         .replace(/_not_mobile_html_sw/g, '')
         .replace(/_mobile_html_sw/g, '')

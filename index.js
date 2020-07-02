@@ -18,7 +18,7 @@ function cleaner() {
     if (!x.value) { alert('Please, paste any shitty game in the text area'); return; }
     if (x.value.slice(0, 25) === 'You can play these slots:') { return; }
     if (x.value.slice(0, 35) === 'Вы можете играть в следующие слоты:') { return; }
-    if (x.value.search('softswiss') < 0 && x.value.search('pragmatic') < 0 && x.value.search('netent') < 0 && x.value.search('mrslotty') < 0) { alert("This provider's name has been forgotten. These are available: softswiss, pragmatic, netent, mrslotty."); return; }
+    if (x.value.search('softswiss') < 0 && x.value.search('pragmatic') < 0 && x.value.search('netent') < 0 && x.value.search('mrslotty') < 0 && x.value.search('playngo') < 0) { alert("This provider's name has been forgotten. These are available: softswiss, pragmatic, netent, mrslotty, playngo."); return; }
     
 
     let clean = x.value

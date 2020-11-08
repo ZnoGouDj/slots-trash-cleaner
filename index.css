@@ -1,17 +1,31 @@
+* {
+    font-family: "Allerta Stencil", Sans-serif;
+    text-align: center;
+}
+
 body {
     background-color:#2A2B2DFF;
 }
 
+h1 {
+    color:  #FCF6F5FF;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 250px;
+}
+
+p {
+    color:  #FCF6F5FF;
+}
+
 #button {
-    background-color: #2DA8D8FF; 
-    border: 1px;
-    color: #2A2B2DFF;
-    padding: 15px 32px;
-    text-align: center;
+    background-color: #2196F3; 
+    color: #FCF6F5FF;
+    padding: 15px 50px;
     text-decoration: none;
-    display: block;
+    font-weight: bold;
     font-size: 16px;
-    margin: 0 auto;
+    margin: 0 90px;
   }
 
 #button:hover {
@@ -22,5 +36,70 @@ body {
     background-color: #FCF6F5FF;
     width: 560px;
     display: block;
-    margin: 250px auto 25px;
+    margin: 18px auto 25px;
 }
+
+/* toggle */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

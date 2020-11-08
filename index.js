@@ -234,6 +234,7 @@ function cleaner() {
             return str.toUpperCase();
         })
 
+
         //remove duplicates
         let uniq = clean.split(', ');
         let unique = [...new Set(uniq)]; 

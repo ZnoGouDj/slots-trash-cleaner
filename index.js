@@ -12,13 +12,33 @@ function languageChanger() {
     }
 }
 
+async function copyText() {
+  // Get the textarea element
+  var textarea = document.getElementById("thetext");
+  // Get the text to copy
+  const text = textarea.value;
+  try {
+      await navigator.clipboard.writeText(text);
+      console.log('Copying to clipboard was successful!');
+  } catch (err) {
+      console.error('Failed to copy text: ', err);
+  }
+}
+
 function cleaner() {
     let x = document.getElementById('thetext');
 
-    if (!x.value) { alert('Please, paste any shitty game in the text area'); return; }
-    if (x.value.slice(0, 25) === 'You can play these slots:') { return; }
-    if (x.value.slice(0, 35) === 'Вы можете играть в следующие слоты:') { return; }
-    
+    if (!x.value) {
+        alert('Please, paste any shitty game in the text area');
+        return;
+    }
+    if (x.value.includes('You can play these slots')) {
+        return;
+    }
+    if (x.value.includes('Вы можете играть в следующие слоты')) {
+        return;
+    }
+
 
     let clean = x.value
         .replace(/([A-Z])/g, ' $1')
@@ -223,23 +243,23 @@ function cleaner() {
         .replace(/810/g, 'Wolf Moon Rising')
         .replace(/801/g, 'Yak, Yeti & Roll')
         // .replace(/2/g, 'Lucky Seven')
-        
+
 
         //mrslotty_trash_removal
         .replace(/_not_mobile_html_sw/g, '')
         .replace(/_mobile_html_sw/g, '')
 
         .replace(/[\[\]":]+/g, '')
-        .replace(/^./, function (str) {
+        .replace(/^./, function(str) {
             return str.toUpperCase();
         })
 
 
-        //remove duplicates
-        let uniq = clean.split(', ');
-        let unique = [...new Set(uniq)]; 
-        let final = unique.join(', ');
-    
+    //remove duplicates
+    let uniq = clean.split(', ');
+    let unique = [...new Set(uniq)];
+    let final = unique.join(', ');
+
     if (language === 'en') {
         x.value = 'You can play these slots:' + final + '. Good luck!';
     } else {
@@ -254,4 +274,3 @@ function cleaner() {
 // ["netent:kingofslots_not_mobile_html_sw", "netent:kingofslots_mobile_html_sw"]
 // ["bsg:693", "bsg:692", "bsg:755", "bsg:756", "bsg:512", "bsg:513", "bsg:2", "bsg:228"]
 // ["bsg:693", "bsg:692", "bsg:755", "bsg:756", "bsg:512", "bsg:513"]
-

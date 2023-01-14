@@ -103,3 +103,24 @@ p {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .control-group {
+    position:relative;
+  }
+
+  #copy-button {
+    position: absolute;
+    top: -23px;
+    right: 600px;
+    cursor: pointer;
+  }
+
+  #copy-button:hover {
+    background-color: #D9514E;
+  }
+
+  .copy-text {
+    position: absolute;
+    top: -40px;
+    right: 516px;
+}

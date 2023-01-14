@@ -25,6 +25,13 @@ async function copyText() {
   }
 }
 
+function deleteText() {
+  // Get the textarea element
+  var textarea = document.getElementById("thetext");
+  // Get the text to copy
+  textarea.value = '';
+}
+
 function cleaner() {
     let x = document.getElementById('thetext');
 

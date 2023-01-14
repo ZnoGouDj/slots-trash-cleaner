@@ -111,16 +111,35 @@ p {
   #copy-button {
     position: absolute;
     top: -23px;
-    right: 600px;
+    right: 591px;
     cursor: pointer;
   }
-
+  
   #copy-button:hover {
-    background-color: #D9514E;
+    background-color: #71d94e;
   }
 
   .copy-text {
     position: absolute;
-    top: -40px;
+    top: -35px;
     right: 516px;
-}
+    font-size: 14px;
+  }
+
+  #delete-button {
+    position: absolute;
+    top: -23px;
+    left: 600px;
+    cursor: pointer;
+  }
+
+  #delete-button:hover {
+    background-color: #D9514E;
+  }
+
+  .delete-text {
+    position: absolute;
+    top: -35px;
+    left: 512px;
+    font-size: 14px;
+  }
